@@ -39,9 +39,15 @@ def profile():
     return render_template("profile.html")
 
 @app.route("/tools")
+<<<<<<< HEAD
 def tools(): 
     return render_template("resources.html")    
     
 if __name__ == "__main__":
     app.run(debug=True)
+=======
+def tools():
+        return render_template("tools.html")
+
+>>>>>>> 7ccd160b037e27e28bc3b2f282d26734d85215df
 
