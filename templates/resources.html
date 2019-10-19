@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+=======
+<link rel="stylesheet" href="static/css/main.css" />
+<html>
+>>>>>>> b60f37093fe9d8e7d71748177bc7488c93e66772
 <head>
 	<h1>Your Credit Score!</h1>
   <meta charset="utf-8">
@@ -34,7 +39,7 @@
     var colors = ["#5EBBF8", "#F5F5F5"]
     
     var pies = d3.layout.pie()
-    	.value( d => d)
+    	.value( d <= d)
     	.sort(null)
     	.startAngle( anglesRange * -1)
     	.endAngle( anglesRange)
@@ -45,7 +50,7 @@
     
     var translation = (x, y) => `translate(${x}, ${y})`
     
-    // Feel free to change or delete any of the code you see in this editor!
+    // Half Pie Chart to display Credit Score!
     var svg = d3.select("body").append("svg")
       .attr("width", width)
       .attr("height", height)
@@ -67,6 +72,7 @@
     	.attr("class", "label")
     	.attr("text-anchor", "middle")
   </script>
+
 
   
 </body>
