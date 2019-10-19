@@ -4,14 +4,14 @@ import pdb
 
 @app.route("/")
 def home():
-    joe = User(fullname='Joseph Nastasi', email='joe@jp.org', ssn='123-45-6789',phone_number='8106236861', monthly_income='1,000,000', value_of_assets='1,000,000', total_debt=200000,debt_dist1=10,debt_dist2=20,debt_dist3=70)
+    joe = User(fullname='Joseph Nastasi', email='joe@jp.org', ssn='123-45-6789',phone_number='8106236861', monthly_income='1,000,000', value_of_assets='1,000,000', total_debt=20,debt_dist1=10,debt_dist2=20,debt_dist3=70)
     average = User(fullname='AVERAGE', email='avg@jp.org', ssn='987-54-321',phone_number='12345678', monthly_income='2,000,000', value_of_assets='2,000,000',total_debt=300000,debt_dist1=50,debt_dist2=30,debt_dist3=20)
     
     
     joe_data = User.query.filter_by(fullname='Joseph Nastasi').first()
     avg_data = User.query.filter_by(fullname='AVERAGE').first()
     
-    
+
     if not joe_data:
         db.session.add(joe)
     if not avg_data:
