@@ -29,10 +29,10 @@
     h = 300,                            //height
     r = 100,                            //radius
     color = d3.scale.category20c();     //builtin range of colors
-
-    data = [{"label":"one", "value":20}, 
-            {"label":"two", "value":50}, 
-            {"label":"three", "value":30}];
+    console.log("{{ val1 }}")
+    data = [{"label":"one", "value": {{ val1 }}}, 
+            {"label":"two", "value": {{ val2 }}}, 
+            {"label":"three", "value": {{ val3 }}}];
     
     var vis = d3.select("body")
         .append("svg:svg")              //create the SVG element inside the <body>
