@@ -493,3 +493,7 @@ h4 { /* for post listings on updates page */
 	height: 100%;
 }
 
+.apprisen {
+	position: fixed; 
+
+}
