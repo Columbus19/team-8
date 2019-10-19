@@ -1,8 +1,36 @@
 <!DOCTYPE html>
+
 <head>
   <meta charset="utf-8">
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
+
+<html>
+<link rel="stylesheet" href="static/css/main.css" />
+
+<div class="masthead">
+    <div class="heading"><a href="/">Apprisen</a></div>   
+    <nav>
+        <div class="tab">
+            <button onclick="window.location.href='/'">Dashboard</button>
+        </div>
+        <div class="tab">
+            <button onclick="window.location.href='/tools'">Tools</button>
+        </div>
+        <div class="tab">
+            <button onclick="window.location.href='/profile'">Profile</button>
+        </div>
+    </nav>    
+</div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Resources and Tools</title>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<br><br>   
+<h1 color="green">Your Credit Score!</h1>
+<br><br>
+<header style="background-color: white"></header>
 
   <style>
         body { text-align: center; }
@@ -16,10 +44,14 @@
   </style>
 </head>
 
+
 <body>
   <script>
         // Data
     var value = 0.75
+        // Data
+    var value = 0.68
+
     var text = value * 1000;
     var data = [value, 1 - value]
     
@@ -66,5 +98,13 @@
         .attr("dy", "-3rem")
         .attr("class", "label")
         .attr("text-anchor", "middle")
+
   </script>
 </body>
+
+
+
+<p>You have good credit!</p>
+</body>
+</html>
+

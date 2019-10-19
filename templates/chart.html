@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="static/css/main.css" />
+
+<div class="masthead">
+    <div class="heading"><a href="/">Apprisen</a></div>   
+    <nav>
+        <div class="tab">
+            <button onclick="window.location.href='/'">Dashboard</button>
+        </div>
+        <div class="tab">
+            <button onclick="window.location.href='/tools'">Tools</button>
+        </div>
+        <div class="tab">
+            <button onclick="window.location.href='/profile'">Profile</button>
+        </div>
+    </nav>    
+</div>
 
 <meta charset='utf-8'>
 
@@ -13,13 +29,14 @@
 	
 
 	<body>
-		
-
-
-
-
+	<br><br>
+    <br>
+    <font size="+10">Welcome back, Joe, to your online dashboard!</font>
+    
 
 	<div class="progress"></div>
+
+
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
 	<script>
@@ -27,13 +44,13 @@
 
 
     var w = 300,                        //width
-    h = 300,                            //height
+    h = 400,                            //height
     r = 100,                            //radius
     color = d3.scale.category20c();     //builtin range of colors
-
-    data = [{"label":"one", "value":20}, 
-            {"label":"two", "value":50}, 
-            {"label":"three", "value":30}];
+    console.log("{{ val1 }}")
+    data = [{"label": {{ val1 }}, "value": {{ val1 }}}, 
+            {"label": {{ val2 }}, "value": {{ val2 }}}, 
+            {"label": {{ val3 }}, "value": {{ val3 }}}];
     
     var vis = d3.select("body")
         .append("svg:svg")              //create the SVG element inside the <body>
@@ -68,14 +85,14 @@
             })
             .attr("text-anchor", "middle")                          //center the text on it's origin
             .text(function(d, i) { return data[i].label; });        //get the label from our original data array
-         var w = 300,                        //width
-    h = 300,                            //height
+         var w = 200,                        //width
+    h = 400,                            //height
     r = 100,                            //radius
     color = d3.scale.category20c();     //builtin range of colors
 
-    data = [{"label":"one", "value":20}, 
-            {"label":"two", "value":50}, 
-            {"label":"three", "value":30}];
+    data = [{"label": {{ avg1 }}, "value": {{ avg1 }}}, 
+            {"label": {{ avg2 }}, "value": {{ avg2 }}}, 
+            {"label": {{ avg3 }}, "value": {{ avg3 }}}];
     
     var vis = d3.select("body")
         .append("svg:svg")              //create the SVG element inside the <body>
@@ -113,11 +130,11 @@
         
 	var svg = d3.select('.progress')
 		.append('svg')
-		.attr('height', 100)
-		.attr('width', 500);
+		.attr('height', 200)
+		.attr('width', 1000);
 
 	var states = ['started', 'inProgress', 'completed'],
-	    segmentWidth = 100,
+	    segmentWidth = 700,
 		currentState = 'started';
 
 	var colorScale = d3.scale.ordinal()
@@ -126,10 +143,10 @@
 
 	svg.append('rect')
 		.attr('class', 'bg-rect')
-		.attr('rx', 10)
+		.attr('rx', 20)
 		.attr('ry', 10)
-		.attr('fill', 'gray')
-		.attr('height', 15)
+		.attr('fill', 'white')
+		.attr('height', 90)
 		.attr('width', function(){
 			return segmentWidth * states.length;
 		})
@@ -140,7 +157,7 @@
 					.attr('fill', function(){
 						return colorScale(currentState);
 					})
-					.attr('height', 15)
+					.attr('height', 90)
 					.attr('width', 0)
 					.attr('rx', 10)
 					.attr('ry', 10)

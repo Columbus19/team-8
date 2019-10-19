@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="static/css/main.css" />
+
+<div class="masthead">
+    <div class="heading"><a href="/">Apprisen</a></div>   
+    <nav>
+        <div class="tab">
+            <button onclick="window.location.href='/'">Dashboard</button>
+        </div>
+        <div class="tab">
+            <button onclick="window.location.href='/tools'">Tools</button>
+        </div>
+        <div class="tab">
+            <button onclick="window.location.href='/profile'">Profile</button>
+        </div>
+    </nav>    
+</div>
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -8,10 +24,8 @@
   max-width: 300px;
   margin: auto;
   text-align: center;
-  height: 350px;
+  height: 300px;
   font-family: arial;
-  background-image: linear-gradient(to right top, #09a454, #16a65b, #1fa861, #27aa67, #2eac6d, #2daa68, #2ca764, #2ba55f, #259e4e, #21963b, #1f8f27, #1e8708);
-
   border-radius: 20%
 }
 
@@ -32,10 +46,10 @@ button:hover, a:hover {
 </head>
 <body>
 
-<h2 style="text-align:center; line-height: 500%">Profile</h2>
+<h2 style="text-align:center; font-size: 25px">Profile</h2>
 
-<div class="card">
-	<div class='content'>
+<div class="card" style="background-color: #00264D">
+	<div class='content' style="margin-top: 45px">
   <h1>Jerry Tan</h1>
   <p>Email: jerry88tan@gmail.com</p>
   <p>Credit Score: None-existent</p>
