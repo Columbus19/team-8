@@ -27,9 +27,7 @@
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <br><br>   
 <h1 color="green">Your Credit Score!</h1>
-<br><br>
 <header style="background-color: white"></header>
-
   <style>
         body { text-align: center; }
     svg {
@@ -37,31 +35,26 @@
       height: 100%; */
     }
     .half-donut .label {
-      font-size: 6rem;
+      font-size: 4rem;
     }
   </style>
 </head>
 
-
-<body>
   <script>
         // Data
-    var value = 0.75
-        // Data
     var value = 0.68
-
     var text = value * 1000;
     var data = [value, 1 - value]
     
     // Settings
-        var width = 600
+    var width = 400
     var height = 300
     var anglesRange = 0.5 * Math.PI
     var radis = Math.min(width, 2 * height) / 2
-    var thickness = 100
+    var thickness = 90
     // Utility 
 //     var colors = d3.scale.category10();
-    var colors = ["#5EBBF8", "#F5F5F5"]
+    var colors = ["#90EE90", "#FFFF99"]
     
     var pies = d3.layout.pie()
         .value( d => d)
@@ -98,12 +91,138 @@
         .attr("text-anchor", "middle")
 
   </script>
-</body>
-
-
-
 <p>You have good credit!</p>
 
+<!-- <div class="apprisen">
+<a href="https://www.apprisen.com/tools/budget-planning-and-savings-tools"><img src="{{url_for('static', filename='/Users/CaseyJr/JPMChase/team-8/ApprisenLogo.png')}}" style="width:82px; height:86px" title="Apprisen" alt="Apprisen"></a>
+</div> -->
+<br>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<style>
+    body {
+        font-family:  'PT Sans', sans-serif;
+    }
+    
+    .bar {
+        fill: #4286f4;
+    }
+    
+    .axis {
+        font-size: 13px;
+    }
+    
+    .axis path,
+    .axis line {
+        fill: none;
+        display: none;
+    }
+    
+    .label {
+        font-size: 13px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<div id="graphic"></div>
+
+<script>
+    var data = [{
+            "name": "Living",
+            "value": 20000,
+    },
+        {
+            "name": "Savings",
+            "value": 12000,
+    },
+        {
+            "name": "Invest",
+            "value": 19000,
+    },
+        {
+            "name": "Debt",
+            "value": 16000,
+    }];
+
+    //sort bars based on value
+    data = data.sort(function (a, b) {
+        return d3.ascending(a.value, b.value);
+    })
+
+    //set up svg using margin conventions - we'll need plenty of room on the left for labels
+    var margin = {
+        top: 15,
+        right: 25,
+        bottom: 15,
+        left: 60
+    };
+
+    var width = 400 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
+
+    var svg = d3.select("#graphic").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var x = d3.scale.linear()
+        .range([0, width])
+        .domain([0, d3.max(data, function (d) {
+            return d.value;
+        })]);
+
+    var y = d3.scale.ordinal()
+        .rangeRoundBands([height, 0], .1)
+        .domain(data.map(function (d) {
+            return d.name;
+        }));
+
+    //make y axis to show bar names
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        //no tick marks
+        .tickSize(0)
+        .orient("left");
+
+    var gy = svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+
+    var bars = svg.selectAll(".bar")
+        .data(data)
+        .enter()
+        .append("g")
+
+    //append rects
+    bars.append("rect")
+        .attr("class", "bar")
+        .attr("y", function (d) {
+            return y(d.name);
+        })
+        .attr("height", y.rangeBand())
+        .attr("x", 0)
+        .attr("width", function (d) {
+            return x(d.value);
+        });
+
+    //add a value label to the right of each bar
+    bars.append("text")
+        .attr("class", "label")
+        //y position of the label is halfway down the bar
+        .attr("y", function (d) {
+            return y(d.name) + y.rangeBand() / 2 + 4;
+        })
+        //x position is 3 pixels to the right of the bar
+        .attr("x", function (d) {
+            return x(d.value) + 3;
+        })
+        .text(function (d) {
+            return d.value;
+        });
+    
+</script>
 </body>
 </html>
-
