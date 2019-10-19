@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="static/css/main.css" />
 
 <div class="masthead">
+    <img src="img_lights.jpg" alt="Lights" class="w3-image">
     <div class="heading"><a href="/">Apprisen</a></div>   
     <nav>
         <div class="tab">
@@ -30,14 +31,16 @@
 
 	<body>
 	<br><br>
+    <br><br><br><br><br>
+    <font size="+10">Hi Joe - welcome back to your online dashboard!</font>
     <br>
-    <font size="+10">Welcome back, Joe, to your online dashboard!</font>
-    
+    <font size="+2">Great work checking in with us this month</font>
+    <br><br>
 
 	<div class="progress"></div>
-
-
-
+    <br><br><br><br>
+    <p><font size="+3">Here's your recent spending, compared to other consumers</font></p>
+    <br>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
 	<script>
 
@@ -139,13 +142,13 @@
 
 	var colorScale = d3.scale.ordinal()
 		.domain(states)
-		.range(['yellow', 'orange', 'green']);
+		.range(['green', 'orange', 'green']);
 
 	svg.append('rect')
 		.attr('class', 'bg-rect')
 		.attr('rx', 20)
 		.attr('ry', 10)
-		.attr('fill', 'white')
+		.attr('fill', 'yellow')
 		.attr('height', 90)
 		.attr('width', function(){
 			return segmentWidth * states.length;
@@ -164,7 +167,7 @@
 					.attr('x', 0);
 
 	progress.transition()
-		.duration(1000)
+		.duration(1700)
 		.attr('width', function(){
 			var index = states.indexOf(currentState);
 			return (index + 1) * segmentWidth;
@@ -181,8 +184,6 @@
 				return (index + 1) * segmentWidth;
 			});
 	}
-
-
 	</script>
 	</body>
 </html>

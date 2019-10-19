@@ -53,7 +53,7 @@ body {
 	background-repeat:no-repeat;
 
 
-	background-image: linear-gradient(to right top, #09a454, #16a65b, #1fa861, #27aa67, #2eac6d, #2daa68, #2ca764, #2ba55f, #259e4e, #21963b, #1f8f27, #1e8708);
+	background-image: linear-gradient( 72.5deg, rgba(0,175,255,1) 27.9%, rgba(0,224,254,1) 84.2% );
 /*	background: rgb(36,34,82);
 	background: -moz-linear-gradient(90deg, rgba(36,34,82,1) 0%, rgba(81,56,88,1) 51%, rgba(25,33,57,1) 100%);
 	background: -webkit-linear-gradient(90deg, rgba(36,34,82,1) 0%, rgba(81,56,88,1) 51%, rgba(25,33,57,1) 100%);
