@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
+  <title>Resources and Tools</title>
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-
-
+   
+<h1 color="green">Your Credit Score!</h1>
+<header style="background-color: white"></header>
   <style>
         body { text-align: center; }
     svg {
@@ -16,7 +18,7 @@
   </style>
 </head>
 
-<body>
+<body style="background: linear-gradient(#09a454, #16a65b, #1fa861, #27aa67, #2eac6d, #2daa68, #2ca764, #2ba55f, #259e4e, #21963b, #1f8f27, #1e8708)">
   <script>
         // Data
     var value = 0.75
@@ -24,8 +26,8 @@
     var data = [value, 1 - value]
     
     // Settings
-        var width = 600
-    var height = 300
+        var width = 900
+    var height = 600
     var anglesRange = 0.5 * Math.PI
     var radis = Math.min(width, 2 * height) / 2
     var thickness = 100
@@ -66,5 +68,8 @@
         .attr("dy", "-3rem")
         .attr("class", "label")
         .attr("text-anchor", "middle")
+
   </script>
+
+<p>You have good credit!</p>
 </body>
