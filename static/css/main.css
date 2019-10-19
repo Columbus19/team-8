@@ -184,7 +184,7 @@ ul {
 }
 
 .masthead {
-	padding-top: 15px;
+	padding-top: 10px;
 	background-color: #ebf1f6;
 	overflow: auto;    
 	z-index: 990;
@@ -200,7 +200,7 @@ ul {
 	color: #003300;
 	font-family: 'PT Sans', sans-serif;
 	position: relative;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	display: block;    
 	font-weight: normal;
 }

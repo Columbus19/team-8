@@ -2,13 +2,12 @@
 <html>
 <link rel="stylesheet" href="static/css/main.css" />
 <head>
-  <style>body {font-family: Arial, Helvetica, sans-serif;}
-
+  <style>
 
 input[type=text], input[type=password] {
   width: 85%;
   padding: 12px 20px;
-  margin: 36px 0;
+  margin: 10px 0;
   display: inline-block;
   box-sizing: border-box;
 }
@@ -67,16 +66,15 @@ span.psw {
 </head>
 <div class="masthead">
     <div class="heading"><a href="/">Apprisen</a></div>
- 
 </div>
 
 
-<h1 style="margin-top: 50px; font-weight: bold"> Login</h1>
 
+<br><br>
+<img src="static/images/logoFront.png" height="100" width="100">
 
 <body>
  <form action="{{ url_for('template') }}" method="post">
-
   <div class="container">
     <label for="uname"><b>Username:</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
@@ -86,4 +84,5 @@ span.psw {
         
     <button type="submit" onclick='/charts' style="background-color: #00264D">Login</button>
 </body>
+<br><br><br><br><br><br>
 </html>
