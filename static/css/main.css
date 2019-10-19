@@ -1,3 +1,5 @@
+
+
 :root {
 	--breakpoint-xs: 0;
 	--breakpoint-sm: 576px;
@@ -51,7 +53,7 @@ body {
 	background-repeat:no-repeat;
 
 
-	background-image: linear-gradient(to right top, #09a454, #16a65b, #1fa861, #27aa67, #2eac6d, #2daa68, #2ca764, #2ba55f, #259e4e, #21963b, #1f8f27, #1e8708);
+	background-image: linear-gradient( 72.5deg, rgba(0,175,255,1) 27.9%, rgba(0,224,254,1) 84.2% );
 /*	background: rgb(36,34,82);
 	background: -moz-linear-gradient(90deg, rgba(36,34,82,1) 0%, rgba(81,56,88,1) 51%, rgba(25,33,57,1) 100%);
 	background: -webkit-linear-gradient(90deg, rgba(36,34,82,1) 0%, rgba(81,56,88,1) 51%, rgba(25,33,57,1) 100%);
@@ -183,7 +185,7 @@ ul {
 }
 
 .masthead {
-	padding-top: 15px;
+	padding-top: 10px;
 	background-color: #ebf1f6;
 	overflow: auto;    
 	z-index: 990;
@@ -199,7 +201,7 @@ ul {
 	color: #003300;
 	font-family: 'PT Sans', sans-serif;
 	position: relative;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	display: block;    
 	font-weight: normal;
 }
@@ -301,6 +303,14 @@ nav {
   .column.side, .column.middle {
     width: 100%;
   }
+}
+
+#rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
 }
 
 #currently {
@@ -494,7 +504,11 @@ h4 { /* for post listings on updates page */
 	height: 100%;
 }
 
+<<<<<<< HEAD
 .apprisen {
 	position: fixed; 
 
 }
+=======
+
+>>>>>>> f4fd6f722a6597a728b1ab1632950e6e1a78a6dc

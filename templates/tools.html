@@ -2,11 +2,15 @@
 <html>
 <link rel="stylesheet" href="static/css/main.css" />
 
-<div class="masthead">
-    <div class="heading"><a href="/">Apprisen</a></div>   
+<div class="masthead"> 
+    <div class="heading">
+        <img src="static/images/logofinal.jpg" height="50" width="50">
+        <a href="/">Apprisen</a>
+        </div> 
+    <div class="static/images/logo.jpg"></div>​
     <nav>
         <div class="tab">
-            <button onclick="window.location.href='/'">Dashboard</button>
+            <button onclick="window.location.href='/charts'">Dashboard</button>
         </div>
         <div class="tab">
             <button onclick="window.location.href='/tools'">Tools</button>
@@ -23,7 +27,6 @@
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <br><br>   
 <h1 color="green">Your Credit Score!</h1>
-<br><br>
 <header style="background-color: white"></header>
   <style>
         body { text-align: center; }
@@ -32,7 +35,7 @@
       height: 100%; */
     }
     .half-donut .label {
-      font-size: 6rem;
+      font-size: 4rem;
     }
   </style>
 </head>
@@ -44,14 +47,14 @@
     var data = [value, 1 - value]
     
     // Settings
-        var width = 600
+    var width = 400
     var height = 300
     var anglesRange = 0.5 * Math.PI
     var radis = Math.min(width, 2 * height) / 2
-    var thickness = 100
+    var thickness = 90
     // Utility 
 //     var colors = d3.scale.category10();
-    var colors = ["#5EBBF8", "#F5F5F5"]
+    var colors = ["#90EE90", "#FFFF99"]
     
     var pies = d3.layout.pie()
         .value( d => d)
@@ -90,6 +93,7 @@
   </script>
 <p>You have good credit!</p>
 
+<<<<<<< HEAD
 <div class="apprisen">
 <a href="https://www.apprisen.com/tools/budget-planning-and-savings-tools"><img src="{{url_for('static', filename='/Users/CaseyJr/JPMChase/team-8/ApprisenLogo.png')}}" style="width:82px; height:86px" title="Apprisen" alt="Apprisen"></a>
 </div>
@@ -97,6 +101,16 @@
 <style>
     body {
         font-family: "Arial", sans-serif;
+=======
+<!-- <div class="apprisen">
+<a href="https://www.apprisen.com/tools/budget-planning-and-savings-tools"><img src="{{url_for('static', filename='/Users/CaseyJr/JPMChase/team-8/ApprisenLogo.png')}}" style="width:82px; height:86px" title="Apprisen" alt="Apprisen"></a>
+</div> -->
+<br>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<style>
+    body {
+        font-family:  'PT Sans', sans-serif;
+>>>>>>> f4fd6f722a6597a728b1ab1632950e6e1a78a6dc
     }
     
     .bar {
@@ -134,7 +148,11 @@
             "value": 12000,
     },
         {
+<<<<<<< HEAD
             "name": "Investments",
+=======
+            "name": "Invest",
+>>>>>>> f4fd6f722a6597a728b1ab1632950e6e1a78a6dc
             "value": 19000,
     },
         {
@@ -155,8 +173,13 @@
         left: 60
     };
 
+<<<<<<< HEAD
     var width = 750 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
+=======
+    var width = 400 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
+>>>>>>> f4fd6f722a6597a728b1ab1632950e6e1a78a6dc
 
     var svg = d3.select("#graphic").append("svg")
         .attr("width", width + margin.left + margin.right)

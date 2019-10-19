@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="static/css/main.css" />
+<head>  <title>DashBoard</title></head>
 
-<div class="masthead">
-    <div class="heading"><a href="/">Apprisen</a></div>   
+<div class="masthead"> 
+    <div class="heading">
+        <img src="static/images/logofinal.jpg" height="50" width="50">
+        <a href="/">Apprisen</a>
+        </div> 
+    <div class="static/images/logo.jpg"></div>​
     <nav>
         <div class="tab">
-            <button onclick="window.location.href='/'">Dashboard</button>
+            <button onclick="window.location.href='/charts'">Dashboard</button>
         </div>
         <div class="tab">
             <button onclick="window.location.href='/tools'">Tools</button>
@@ -26,25 +31,40 @@
 	}
 
 	</style>
+	
 
 	<body>
 	<br><br>
-    <h3> Apprisen </h3>
+    <br><br><br><br><br>
+    <font size="+10">Hi Joe - welcome back to your online dashboard!</font>
     <br>
-    <p style="display: inline; text-align: left; margin: auto">Welcome back to your online dashboard</u></a>
-    </p>
-
+    <font size="+2">Great work checking in with us this month</font>
+    <br><br>
+    <p><font size="+3">You've paid off $1290 of $2000!</font></p>
 	<div class="progress"></div>
 
 
 
+
+    <table cellpadding ="50">
+        <tr>
+            <td style=align: center> Here's your debt breakdown</td>
+            <td></td>
+            <td> Here's the debt breakdown of people like you</td>
+        </tr>
+    </table>
+<!--     <br><br><br><br>
+    <p><font size="+3">Here's your recent spending, compared to other consumers</font></p> -->
+
+
+    <br>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
 	<script>
 
 
 
     var w = 300,                        //width
-    h = 300,                            //height
+    h = 400,                            //height
     r = 100,                            //radius
     color = d3.scale.category20c();     //builtin range of colors
     console.log("{{ val1 }}")
@@ -85,8 +105,8 @@
             })
             .attr("text-anchor", "middle")                          //center the text on it's origin
             .text(function(d, i) { return data[i].label; });        //get the label from our original data array
-         var w = 300,                        //width
-    h = 300,                            //height
+         var w = 200,                        //width
+    h = 400,                            //height
     r = 100,                            //radius
     color = d3.scale.category20c();     //builtin range of colors
 
@@ -130,23 +150,23 @@
         
 	var svg = d3.select('.progress')
 		.append('svg')
-		.attr('height', 100)
-		.attr('width', 300);
+		.attr('height', 200)
+		.attr('width', 1000);
 
 	var states = ['started', 'inProgress', 'completed'],
-	    segmentWidth = 100,
+	    segmentWidth = 700,
 		currentState = 'started';
 
 	var colorScale = d3.scale.ordinal()
 		.domain(states)
-		.range(['yellow', 'orange', 'green']);
+		.range(['green', 'orange', 'green']);
 
 	svg.append('rect')
 		.attr('class', 'bg-rect')
-		.attr('rx', 10)
+		.attr('rx', 20)
 		.attr('ry', 10)
-		.attr('fill', 'gray')
-		.attr('height', 15)
+		.attr('fill', 'yellow')
+		.attr('height', 90)
 		.attr('width', function(){
 			return segmentWidth * states.length;
 		})
@@ -157,14 +177,14 @@
 					.attr('fill', function(){
 						return colorScale(currentState);
 					})
-					.attr('height', 15)
+					.attr('height', 90)
 					.attr('width', 0)
 					.attr('rx', 10)
 					.attr('ry', 10)
 					.attr('x', 0);
 
 	progress.transition()
-		.duration(1000)
+		.duration(1700)
 		.attr('width', function(){
 			var index = states.indexOf(currentState);
 			return (index + 1) * segmentWidth;
@@ -181,8 +201,6 @@
 				return (index + 1) * segmentWidth;
 			});
 	}
-
-
 	</script>
 	</body>
 </html>
