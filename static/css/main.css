@@ -18,7 +18,7 @@ H1{
 
 @charset "UTF-8";
 /*@import url(font-awesome.min.css);*/
-@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap')
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
 
 /* Reset */
 html {
@@ -60,9 +60,10 @@ body {
 */
 	display: table;
 	width: 100%;
-	height:;
-	overscroll-behavior: none;
+	height:
+	overscroll-behavior; 
 }
+
 p {
 	line-height: 18px;
 	font-family: 'PT Sans', sans-serif;
@@ -255,7 +256,7 @@ nav {
 }
 
 .container {
-	text-align: center;  /* changed MOST RECENT -- this one works101!'*/'
+	text-align: center;  /* changed MOST RECENT -- this one works101!'*/
 }/*changed*/
 
 .container-reads a {
