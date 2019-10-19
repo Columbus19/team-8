@@ -6,11 +6,10 @@
 	--breakpoint-xl: 1200px;
 }
 
-<<<<<<< HEAD
 H1{
 	text-align: center; 
 }
-=======
+
 *,
 *::before,
 *::after {
@@ -493,4 +492,4 @@ h4 { /* for post listings on updates page */
 	width: 100%;
 	height: 100%;
 }
->>>>>>> b60f37093fe9d8e7d71748177bc7488c93e66772
+

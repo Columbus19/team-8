@@ -40,7 +40,7 @@ def profile():
 
 @app.route("/tools")
 def tools(): 
-    return render_template("resources.html")    
+    return render_template("tools.html")    
     
 if __name__ == "__main__":
     app.run(debug=True)
